@@ -21,7 +21,7 @@ document.addEventListener('click', function(event) {
     if (!event.target.closest('.nav-links li')) {
         const dropdowns = document.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {
-            dropdown.style.display = 'none';
+            dropdown.classList.remove('active');
         });
     }
 });
@@ -33,6 +33,46 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set current page indicator if needed
     const currentPage = getCurrentPageName();
     highlightCurrentNav(currentPage);
+
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    const nav = document.querySelector('nav');
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function() {
+            hamburgerBtn.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    }
+
+    // Mobile dropdown toggle
+    const navItems = document.querySelectorAll('.nav-links > li');
+    navItems.forEach(item => {
+        const link = item.querySelector('a');
+        const dropdown = item.querySelector('.dropdown');
+
+        if (dropdown) {
+            link.addEventListener('click', function(e) {
+                // Only prevent default on mobile
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Close menu when a link is clicked
+    const allLinks = document.querySelectorAll('.nav-links a');
+    allLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (hamburgerBtn && nav) {
+                hamburgerBtn.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    });
 });
 
 /**

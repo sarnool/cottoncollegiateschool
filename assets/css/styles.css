@@ -305,6 +305,37 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Responsive Breakpoints Handling */
 @media (max-width: 992px) {
     .container {
@@ -313,5 +344,105 @@ footer p {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--bg-white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links > li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        background-color: var(--bg-light);
+        box-shadow: none;
+        border: none;
+        min-width: auto;
+    }
+
+    .dropdown.active {
+        display: block;
+    }
+
+    .dropdown li a {
+        padding: 12px 20px 12px 40px;
+    }
+
+    .nav-links li:hover .dropdown {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header-meta {
+        font-size: 0.8rem;
+    }
+
+    .school-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
     }
 }
