@@ -30,14 +30,6 @@ document.addEventListener('click', function(event) {
  * Initialize navigation
  */
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scroll behavior to navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-        });
-    });
-
     // Set current page indicator if needed
     const currentPage = getCurrentPageName();
     highlightCurrentNav(currentPage);
