@@ -1,0 +1,317 @@
+:root {
+    --primary-color: #0d2c54;
+    --secondary-color: #c9a66b;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --bg-light: #f4f6f9;
+    --bg-white: #ffffff;
+    --border-color: #e1e8ed;
+    --accent-color: #1a508b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* Top Header Brand Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.school-brand h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+.school-brand p {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+/* Sticky Navigation Menu */
+.nav-container {
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    padding: 18px 22px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links li:hover > a {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Dropdown Menu Stylings */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-white);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    min-width: 240px;
+    border-top: 2px solid var(--secondary-color);
+    z-index: 1001;
+    list-style: none;
+}
+
+.dropdown li a {
+    color: var(--text-dark);
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown li a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+/* Main Structural Hero Layout */
+.hero {
+    background: linear-gradient(rgba(13, 44, 84, 0.85), rgba(13, 44, 84, 0.85)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Main Framework Wrapper */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+}
+
+main {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section.active-section {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2.section-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+h3.subsection-title {
+    color: var(--accent-color);
+    margin: 25px 0 10px 0;
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Sidebar Widgets Styling */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border-left: 4px solid var(--primary-color);
+}
+
+.widget h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Form Controls Setup */
+.contact-form {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+}
+
+/* Tabular Layout Framework */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+/* Footer Settings */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Breakpoints Handling */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
