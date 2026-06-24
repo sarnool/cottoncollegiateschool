@@ -58,3 +58,51 @@ mood: Formal and ceremonial, with an organized and respectful atmosphere suitabl
 suggested pages: School events or समारोह page, institutional programs or initiatives section, cultural or ceremonial events page, achievements or highlights section, official functions or announcements page.
 
 alt text: Group of adults on a stage holding a ceremonial lamp during an indoor school event, with a banner and red curtains in the background and a speaker addressing the audience.
+
+file_path: assets/images/2016-10-17.jpg
+description: A daylight photograph of an older school campus building partly framed by trees and a fenced garden strip in front. The structure appears weathered and institutional, with windows along the facade and shaded grounds that suggest a long-established campus environment.
+people: No clearly visible people in the foreground; the scene is primarily architectural and landscape focused.
+setting: Outdoor school campus frontage with trees, boundary posts, and a garden area beside an internal roadway.
+mood: Calm, archival, and heritage-oriented.
+suggested pages: About page, school history section, heritage timeline, campus legacy content.
+alt text: Older Cotton Collegiate campus building seen behind trees and a fenced garden area in daylight.
+
+file_path: assets/images/Cotton_Collegiate_logo.jpg
+description: Circular emblem of Cotton Collegiate Government Higher Secondary School, featuring Assamese and English text around the border and a central red sunburst motif.
+people: No people shown; this is a logo graphic.
+setting: Graphic identity asset used for school branding.
+mood: Formal and institutional.
+suggested pages: Site header branding, official documents section, about page identity block.
+alt text: Cotton Collegiate Government Higher Secondary School circular logo with Assamese and English text.
+
+file_path: assets/images/IMG_20220315_210949.jpg
+description: Indoor group photo of alumni and guests seated in a semicircle in a hall or lounge, many wearing traditional Assamese gamusa scarves, during an organized association gathering.
+people: A mixed group of adult men and women, likely alumni members and guests, seated together for a formal or commemorative photo.
+setting: Indoor event venue with tables, chairs, and ambient lighting, likely during an alumni meet.
+mood: Formal, warm, and community-centered.
+suggested pages: Alumni page, membership page, alumni reunion highlights, association events gallery.
+alt text: Alumni members seated together indoors during an association gathering, many wearing traditional Assamese gamusa scarves.
+
+file_path: assets/images/IMG_20220315_211248.jpg
+description: Wide indoor group portrait of alumni participants and organizers arranged in two rows, with seated members in front and standing members behind, taken during a formal meeting or reunion.
+people: A large mixed group of adult alumni and organizers in formal and traditional attire.
+setting: Indoor gathering venue with lounge seating and event decor.
+mood: Ceremonial, collaborative, and celebratory.
+suggested pages: Alumni network page, notable alumni/community section, membership outreach page, events recap section.
+alt text: Large group of alumni and organizers posing indoors during a formal reunion or association meeting.
+
+file_path: assets/images/IMG_20220315_211622.jpg
+description: Mid-range photo of seated alumni members during an indoor event, highlighting senior participants wearing gamusa scarves and engaged in a formal program setting.
+people: Adult alumni members seated in a row, including senior participants and invited members.
+setting: Indoor event hall with warm lighting and arranged seating.
+mood: Respectful, formal, and commemorative.
+suggested pages: Alumni achievers section, association leadership section, reunion highlights.
+alt text: Seated alumni members at an indoor event, wearing traditional Assamese scarves during a formal program.
+
+file_path: assets/images/IMG_20220315_211626.jpg
+description: Close group view of alumni attendees seated during an indoor meeting, showing participants in traditional and formal attire during discussion or ceremony.
+people: Adult alumni attendees seated side-by-side, including both men and women.
+setting: Indoor association meeting venue with tables and background decor.
+mood: Community-focused, formal, and participatory.
+suggested pages: Membership page, alumni community section, event participation highlights.
+alt text: Alumni attendees seated indoors during an association event, with traditional Assamese scarves and formal attire.
