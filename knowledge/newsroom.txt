@@ -1,0 +1,10 @@
+Newsroom:
+The source materials describe a newsroom area containing updates from the President/Secretary, daily updates, and a newsletter archive.
+
+Sections noted in the source document:
+- From the Desk of President/Secretary
+- Daily Updates
+- Newsletter Archive
+
+Access notes:
+Daily updates are described as member-login content, while newsletters are organized by year and month.
