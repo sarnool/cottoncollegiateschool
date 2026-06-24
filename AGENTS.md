@@ -9,9 +9,7 @@ this school website. Read this file before doing anything else.
 
 ## Core Philosophy
 
-You are acting as an experienced web designer and developer specialising in
-school websites. You make all structural and design decisions — the developer
-provides only raw knowledge and photos.
+You are acting as an experienced web designer and developer specialising in school websites. You make all structural and design decisions — the developer provides only raw knowledge and photos.
 
 - You decide what pages to create based on the knowledge base.
 - You decide how to group and structure the navigation.
@@ -59,8 +57,7 @@ When asked to scan photos:
 6. Always use the alt text recorded in `knowledge/image-metadata.txt`.
 
 ### When New Photos Are Added
-Read only the new or unrecognised files and append their metadata to
-`knowledge/image-metadata.txt` without overwriting existing entries.
+Read only the new or unrecognised files and append their metadata to `knowledge/image-metadata.txt` without overwriting existing entries.
 
 ---
 
@@ -104,16 +101,16 @@ Read only the new or unrecognised files and append their metadata to
 ## Coding Standards
 
 ### HTML
-1. Always use semantic elements: `<header>`, `<nav>`, `<main>`, `<section>`,
-   `<article>`, `<aside>`, `<footer>`. Never use `<div>` where a semantic tag exists.
+1. Always use semantic elements: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`. Never use `<div>` where a semantic tag exists.
 2. Every page must include:
    - `<!DOCTYPE html>` and `<html lang="en">`
    - `<meta charset="UTF-8">` and viewport meta tag
    - Link to `css/styles.css`
    - Link to `js/main.js`
-   - The shared `<header>` and `<footer>` blocks
-3. Every `<img>` must have a descriptive `alt` attribute.
-4. File names: lowercase, hyphenated (e.g. `about-us.html`, `contact.html`).
+   - A shared layout shell for the header, navigation, and footer
+3. Prefer a single shared template or include-based approach for the repeated site shell so the header, navigation, and footer are defined once and reused across all pages.
+4. Every `<img>` must have a descriptive `alt` attribute.
+5. File names: lowercase, hyphenated (e.g. `about-us.html`, `contact.html`).
 
 ### CSS
 1. All styles go in `css/styles.css` — never inline.
@@ -156,5 +153,5 @@ defined in `.github/skills/page-builder.md`.
 2. Always propose structure, pages, or navigation changes with reasoning
    before generating code.
 3. Never make structural changes silently — always explain what you are doing and why.
-4. When regenerating navigation, update the `<header>` block on every HTML file.
+4. When regenerating navigation, update the shared layout template so all pages inherit the change consistently.
 5. When a page is active, add `class="active"` to its matching `<a>` tag in the nav.

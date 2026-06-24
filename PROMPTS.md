@@ -247,6 +247,16 @@ After fixing, run the relevant verification check to confirm it is resolved.
 Report back with what was changed.
 ```
 
+### 6.7 Run Verification and Correction Loop Until Clean
+```
+Run the verification workflow in .github/skills/verify-quality.md.
+List every issue found in build-log.txt.
+Then run the correction workflow in .github/skills/correct-quality.md.
+Repeat the verify-and-correct loop until no issues remain.
+Only stop when the site passes the relevant verification checks.
+Report back with a summary of issues found and fixed.
+```
+
 ---
 
 ## SECTION 7 — CORRECTIONS AND ADJUSTMENTS

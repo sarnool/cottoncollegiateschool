@@ -123,3 +123,12 @@ Issues fixed: 1
 Outstanding TODOs: add approved school logo asset path; add verified individual alumni profile entries
 Preview URL: http://localhost:8080
 === END REPORT ===
+
+[CCAA-002] — Add logo to the website — DONE
+Completed: 2026-06-24
+Plan:
+- Add the existing school logo asset to the shared header markup on every page.
+- Style the logo to be prominent and responsive across mobile and desktop layouts.
+- Remove outdated TODO comments related to the logo placeholder.
+Files changed: index.html, about.html, alumni.html, contact.html, events.html, membership.html, odaa.html, student-services.html, vision-mission.html, css/styles.css
+Issues found and fixed: None; responsive logo sizing and shared header integration were applied successfully.

@@ -61,9 +61,11 @@ Append to build-log.txt:
 
 ## Phase 3 — Verify
 
-Run every check below. Log all issues found in build-log.txt
-under a section called "Issues Found". Do not stop at the first
-issue — complete all checks before moving to Phase 4.
+Run the verification workflow in `.github/skills/verify-quality.md`.
+This skill should inspect the site, log all issues found in build-log.txt
+under a section called "Issues Found", and then hand off to the
+correction skill if issues remain. Do not stop at the first issue —
+complete all checks before moving to Phase 4.
 
 ### 3.1 Broken link check
 For every <a href="..."> in every HTML file:
@@ -122,11 +124,14 @@ For every page verify:
 
 ## Phase 4 — Self-Correct
 
-For every issue logged in Phase 3:
+For every issue logged in Phase 3, follow the correction workflow in
+`.github/skills/correct-quality.md`:
 1. Fix it directly — do not ask for permission for technical fixes.
 2. After fixing, re-run the specific check that found the issue
    to confirm it is resolved.
 3. Log each fix in build-log.txt under "Fixes Applied".
+4. If new issues appear, repeat the verification and correction loop
+   until the site is clean.
 
 Priority order for fixes:
 1. Broken links and images (critical — site does not function)

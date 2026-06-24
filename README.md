@@ -47,7 +47,9 @@ cotton-collegiate-website/
 │   └── skills/
 │       ├── navigation.md             # How to build the navigation
 │       ├── page-builder.md           # How to build each page
-│       └── build-and-verify.md       # Full build, verify, self-correct loop
+│       ├── build-and-verify.md       # Full build workflow and ticket loop
+│       ├── verify-quality.md         # Reviews the site for quality issues
+│       └── correct-quality.md        # Fixes issues found by verification
 │
 ├── knowledge/                        # Plain text content — you write these
 │   ├── school.txt                    # School history, name, location
@@ -125,11 +127,38 @@ Build the full site, verify it, fix all issues found, and report
 back with a summary when complete.
 ```
 
-### Step 6 — Review the result
-Open your browser and go to:
+### Step 6 — Run the verification and correction loop
+If you want the agent to verify the site and fix issues automatically, paste this prompt into Agent Mode:
+
 ```
+Run the verification workflow in .github/skills/verify-quality.md.
+List every issue found in build-log.txt.
+Then run the correction workflow in .github/skills/correct-quality.md.
+Repeat the verify-and-correct loop until no issues remain.
+Only stop when the site passes the relevant verification checks.
+Report back with a summary of issues found and fixed.
+```
+
+### Step 7 — Run locally for verification
+From the project root, start a local preview server:
+
+```bash
+python -m http.server 8080
+```
+
+If you are using Python 3, the command is:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open your browser and go to:
+
+```text
 http://localhost:8080
 ```
+
+This is the recommended local preview URL for verifying the site before pushing changes.
 
 ---
 
@@ -177,7 +206,9 @@ The agent will:
 | `.github/copilot-instructions.md` | Global rules active in every Copilot mode | You (done) |
 | `.github/skills/navigation.md` | How the agent designs and builds navigation | You (done) |
 | `.github/skills/page-builder.md` | How the agent builds each page | You (done) |
-| `.github/skills/build-and-verify.md` | Full autonomous build and verify loop | You (done) |
+| `.github/skills/build-and-verify.md` | Full autonomous build and ticket workflow | You (done) |
+| `.github/skills/verify-quality.md` | Reviews the site for structure, accessibility, and content issues | You (done) |
+| `.github/skills/correct-quality.md` | Fixes the issues found by verification | You (done) |
 | `PROMPTS.md` | All prompts you need — copy and paste | You (done) |
 
 ---
@@ -225,6 +256,7 @@ You never need to manually edit these files:
 | New knowledge file added | PROMPTS.md — Section 5.1 |
 | New photos added | PROMPTS.md — Section 5.3 |
 | Run full site verification | PROMPTS.md — Section 6.1 |
+| Run verification and correction loop until clean | PROMPTS.md — Section 6.7 |
 | Something looks wrong | PROMPTS.md — Section 7.3 |
 | View build history | PROMPTS.md — Section 8.1 |
 

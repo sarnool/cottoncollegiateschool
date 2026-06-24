@@ -37,5 +37,6 @@ Plain HTML5, CSS3, and vanilla JavaScript only.
 - Write mobile-first CSS
 - Include descriptive alt text on every image
 - Keep navigation consistent across all pages
+- Use a shared template for the common header, navigation, and footer so these elements are defined once and reused across pages
 - Add `class="active"` to the current page's nav link
 - Propose and explain before making structural changes
