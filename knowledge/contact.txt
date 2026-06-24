@@ -18,5 +18,7 @@ Panbazar, Guwahati - 781001
 Assam, India
 
 Official Communications:
-Email: cottoncollegiatealumni.org
-Support: alumni.collegiate@gmail.com
+Email: alumni.collegiate@gmail.com
+
+Source note:
+The original materials also mention a support email address, but the current site implementation uses the primary email only.
