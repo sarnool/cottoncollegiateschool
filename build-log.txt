@@ -143,3 +143,37 @@ Issues Found
 
 Fixes Applied
 - No corrective changes were required because all relevant quality checks passed.
+
+Strict Verification Pass — 2026-06-24
+- Verification workflow executed using .github/skills/verify-quality.md (strict instruction-compliance gate enabled).
+- Scope reviewed: AGENTS.md, .github/copilot-instructions.md, *.html, css/styles.css, js/main.js.
+
+Issues Found
+- File affected: index.html, about.html, vision-mission.html, alumni.html, events.html, odaa.html, membership.html, student-services.html, contact.html
+- Issue type: Instruction compliance / shared layout architecture
+- Short description: Header and footer were duplicated inline in each HTML page instead of being defined once and reused via a shared template/include mechanism.
+- Severity: Critical
+- Violated instruction source: AGENTS.md and .github/copilot-instructions.md (shared template requirement for common header/navigation/footer).
+
+Fixes Applied
+- Implemented shared layout source files: partials/header.html and partials/footer.html.
+- Refactored all HTML pages to use shared host containers: <div id="site-header"></div> and <div id="site-footer"></div>.
+- Added page metadata on body tags (data-page and data-subpage) to preserve correct active navigation state across pages.
+- Replaced js/main.js with a shared-layout loader and post-injection nav initialization:
+  - fetch('partials/header.html') and fetch('partials/footer.html')
+  - active-class application from data-page/data-subpage
+  - existing mobile nav behavior retained
+- Files changed: partials/header.html, partials/footer.html, js/main.js, index.html, about.html, vision-mission.html, alumni.html, events.html, odaa.html, membership.html, student-services.html, contact.html
+
+Re-run Verification Results
+- Broken links check: PASS (no missing local href targets in HTML content)
+- Broken images check: PASS (no missing image src, all img alt text present)
+- HTML structure check: PASS (exactly one h1 on every page)
+- CSS/JS quality check: PASS (no inline styles or inline JS found)
+- Instruction compliance (shared template requirement): PASS
+  - All pages use shared host containers for header/footer.
+  - Shared source files exist: partials/header.html and partials/footer.html.
+  - Shared loading implemented in js/main.js via fetch().
+
+Final status
+- No issues remain after correction and re-verification.

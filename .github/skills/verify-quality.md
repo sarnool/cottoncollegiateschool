@@ -24,6 +24,16 @@ Inspect the relevant files before evaluating quality:
 ### Step 2 — Run the quality checks
 Check the site against these rules:
 
+0. Instruction compliance gate (strict)
+- Treat AGENTS.md and .github/copilot-instructions.md as mandatory requirements.
+- Verify implementation against required architecture rules, not just visual output.
+- If any mandatory instruction is violated, mark verification as FAIL even if pages render correctly.
+- Required evidence in build-log.txt for this gate:
+   - Files reviewed for instruction source of truth
+   - Each mandatory rule checked
+   - PASS/FAIL result per rule
+   - Concrete file references for every failure
+
 1. Broken links
 - Every `<a href="...">` points to a real file or valid page.
 - No empty links, placeholder links like `#`, or broken paths.
@@ -36,6 +46,9 @@ Check the site against these rules:
 - The shared header and navigation block is consistent across pages.
 - The current page has the correct `active` class.
 - Mobile navigation behaves correctly.
+- Enforce shared-source implementation when required by project instructions:
+   - If instructions require a shared template/include approach, duplicated copy-paste header/nav/footer across pages is a FAIL.
+   - "Looks identical" is not sufficient; code must be sourced from a shared layout mechanism when mandated.
 
 4. HTML structure
 - Each page has `<!DOCTYPE html>`, `<html lang="en">`, and viewport meta.
@@ -47,6 +60,7 @@ Check the site against these rules:
 - No inline styles or inline JavaScript are used.
 - CSS uses shared variables for color and spacing where appropriate.
 - JS is kept in `js/main.js` and uses generic selectors.
+- Also verify path and file conventions required by instructions (for example: required css/js locations and naming conventions).
 
 6. Accessibility
 - Images have meaningful alt text.
@@ -65,11 +79,13 @@ For each issue record:
 - Issue type
 - Short description
 - Severity
+- Violated instruction source (AGENTS.md or .github/copilot-instructions.md)
 
 ### Step 4 — Decide whether correction is needed
 - If no issues are found, report that the site is clean.
 - If issues are found, hand off to the correction skill.
 - Do not stop after the first issue — inspect the full site before handing off.
+- If instruction-compliance gate fails, do not mark the site clean.
 
 ### Step 5 — Re-verify after correction
 After the correction skill has made changes, run the relevant verification checks again.
@@ -84,6 +100,8 @@ Only stop when the issue list is empty or all remaining issues are clearly docum
    - Navigation consistency second
    - Structural/accessibility issues third
    - CSS quality and content polish last
+   - Instruction-compliance violations are always critical and block sign-off.
 3. Prefer root-cause fixes over superficial ones.
 4. If a shared layout issue appears, treat it as a shared-template problem and fix the source template rather than patching one page only.
 5. Never claim the site is correct until the relevant verification checks have been re-run.
+6. Never accept "equivalent output" as a pass when instructions require a specific implementation approach.
