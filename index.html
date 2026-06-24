@@ -1,589 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotton Collegiate Alumni Association | Home</title>
-    <style>
-        :root {
-            --primary-color: #0d2c54;
-            --secondary-color: #c9a66b;
-            --text-dark: #333333;
-            --text-light: #ffffff;
-            --bg-light: #f4f6f9;
-            --bg-white: #ffffff;
-            --border-color: #e1e8ed;
-            --accent-color: #1a508b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-        }
-
-        /* Top Header Brand Bar */
-        .top-bar {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--secondary-color);
-        }
-
-        .school-brand h1 {
-            font-size: 1.6rem;
-            letter-spacing: 0.5px;
-        }
-
-        .school-brand p {
-            font-size: 0.85rem;
-            color: var(--secondary-color);
-        }
-
-        /* Sticky Navigation Menu */
-        .nav-container {
-            background-color: var(--bg-white);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links > li {
-            position: relative;
-        }
-
-        .nav-links a {
-            display: block;
-            padding: 18px 22px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links li:hover > a {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-        }
-
-        /* Dropdown Menu Stylings */
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: var(--bg-white);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            min-width: 240px;
-            border-top: 2px solid var(--secondary-color);
-        }
-
-        .dropdown li a {
-            color: var(--text-dark);
-            padding: 12px 20px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .dropdown li a:hover {
-            background-color: var(--bg-light);
-            color: var(--primary-color);
-        }
-
-        .nav-links li:hover .dropdown {
-            display: block;
-        }
-
-        /* Main Structural Hero Layout */
-        .hero {
-            background: linear-gradient(rgba(13, 44, 84, 0.85), rgba(13, 44, 84, 0.85)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--text-light);
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-
-        .hero p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        /* Main Framework Wrapper */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 30px;
-        }
-
-        main {
-            background-color: var(--bg-white);
-            padding: 40px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        section {
-            display: none;
-            margin-bottom: 40px;
-        }
-
-        section.active-section {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2.section-title {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        h3.subsection-title {
-            color: var(--accent-color);
-            margin: 25px 0 10px 0;
-            font-size: 1.3rem;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        /* Sidebar Widgets Styling */
-        aside {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .widget {
-            background-color: var(--bg-white);
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .widget h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Form Controls Setup */
-        .contact-form {
-            background-color: var(--bg-light);
-            padding: 30px;
-            border-radius: 6px;
-            margin-top: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-        }
-
-        .btn-submit {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--accent-color);
-        }
-
-        /* Tabular Layout Framework */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-        }
-
-        tr:nth-child(even) {
-            background-color: var(--bg-light);
-        }
-
-        /* Footer Settings */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            border-top: 4px solid var(--secondary-color);
-        }
-
-        footer p {
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Breakpoints Handling */
-        @media (max-width: 992px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Cotton Collegiate Alumni Association</title>
+  <meta name="description" content="Cotton Collegiate Govt. H.S. School Alumni Association portal connecting generations through events, membership, and student support.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-page="home">
+  <div id="site-header"></div>
 
-    <!-- Header Block -->
-    <header class="top-bar">
-        <div class="school-brand">
-            <h1>COTTON COLLEGIATE GOVT. H.S. SCHOOL</h1>
-            <p>Alumni Association Portal &bull; Estd. 1835</p>
-        </div>
-        <div class="header-meta">
-            <span>Guwahati, Assam</span>
-        </div>
-    </header>
+  <main>
+    <section class="hero">
+      <img src="assets/images/campus/image1.jpg" alt="Entrance gate of Cotton Collegiate Government Higher Secondary School in Panbazar, Guwahati, showing a white arch with English and Assamese signage and a multi-story school building inside." class="hero-img">
+      <div class="hero-content">
+        <h1>Bridging Three Centuries of Excellence</h1>
+        <p>Connecting generations of alumni, students, and institutional partners through shared history, professional networks, and purposeful programs.</p>
+      </div>
+    </section>
 
-    <!-- Navigation Framework -->
-    <div class="nav-container">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#" onclick="showSection('about')">About Us</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="showSection('about')">Overview</a></li>
-                        <li><a href="#" onclick="showSection('vision')">Vision & Mission</a></li>
-                        <li><a href="#" onclick="showSection('objectives')">Objectives & Activities</a></li>
-                        <li><a href="#" onclick="showSection('odaa')">ODAA</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="showSection('activities')">Activities</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="showSection('calendar')">Calendar of Events</a></li>
-                        <li><a href="#" onclick="showSection('committee')">Events/Programs Committee</a></li>
-                        <li><a href="#" onclick="showSection('affiliates')">Affiliates & Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="showSection('achievers')">Alumni Achievers</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="showSection('limelight')">Alumni in Lime Light</a></li>
-                        <li><a href="#" onclick="showSection('notable')">Notable Alumni</a></li>
-                        <li><a href="#" onclick="showSection('directory')">Who is Who Directory</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="showSection('get-involved')">Get Involved</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="showSection('membership')">Membership Benefits</a></li>
-                        <li><a href="#" onclick="showSection('giving')">Giving & Donations</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="showSection('student-services')">Student Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="showSection('performers')">Top Performers</a></li>
-                        <li><a href="#" onclick="showSection('counseling')">Student Counseling Cell</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="showSection('contact-us')">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+    <section class="section split">
+      <article>
+        <h2>About the School and Association</h2>
+        <p>Cotton Collegiate Govt. H.S. School was established in 1835 and remains a key educational institution in Panbazar, Guwahati. The Alumni Association supports long-term engagement and institutional growth.</p>
+        <a class="text-link" href="about.html">Read the School Story</a>
+      </article>
+      <figure>
+        <img src="assets/images/campus/OIP.webp" alt="School building exterior with a ramped entrance, signage in a regional script, and a white canopy tent with seating arranged for an event in the courtyard.">
+        <figcaption>Campus setting for alumni and institutional events.</figcaption>
+      </figure>
+    </section>
 
-    <!-- Hero Showcase Section -->
-    <div class="hero">
-        <h2>Bridging Three Centuries of Excellence</h2>
-        <p>Connecting elite generations of dynamic leaders, engineers, scientists, and scholars back to India's third premier school campus.</p>
-    </div>
+    <section class="section cards">
+      <article class="card">
+        <h2>Events and Programs</h2>
+        <p>Track the reunion calendar and lecture circles managed by the association and ODAA partners.</p>
+        <a class="text-link" href="events.html">View Event Calendar</a>
+      </article>
+      <article class="card">
+        <h2>Alumni Network</h2>
+        <p>Explore achievements, notable contributors, and directory-building initiatives connecting alumni globally.</p>
+        <a class="text-link" href="alumni.html">Explore Alumni</a>
+      </article>
+      <article class="card">
+        <h2>Student Services</h2>
+        <p>Support pathways for current students through counseling and recognition of top performers.</p>
+        <a class="text-link" href="student-services.html">See Student Services</a>
+      </article>
+    </section>
 
-    <!-- Dual Layout Core Infrastructure -->
-    <div class="container">
-        <main id="content-area">
+    <section class="cta">
+      <h2>Join or Reconnect with the Association</h2>
+      <p>Membership is voluntary, transparent, and designed to strengthen alumni impact for the school community.</p>
+      <a href="membership.html" class="btn-primary">Learn About Membership</a>
+    </section>
+  </main>
 
-            <!-- ABOUT US SECTION -->
-            <section id="about" class="active-section">
-                <h2 class="section-title">About Us</h2>
-                <p>In Assam, secondary education was launched in the year 1834. Capt. Francis Jenkins, the commissioner of Assam (1834-’61), was the first British official to coordinate structural active measures to provide dynamic instruction for the Assamese youth. Approvals came through the East India Company administration in 1835, creating the foundation of modern educational systems within the province with an enrollment base of 58 students under Headmaster Mr. Singer.</p>
-                <p>Through foundational structural transformations across the late 19th and early 20th centuries, the institution was raised to a Collegiate tier in 1865, eventually cementing its historic reputation as the <strong>Cotton Collegiate School</strong>. Today, the modern institution stands bridging three centuries of rich academic inheritance located perfectly within the core heart of Guwahati city.</p>
-            </section>
+  <div id="site-footer"></div>
 
-            <section id="vision">
-                <h2 class="section-title">Vision & Mission</h2>
-                <h3 class="subsection-title">Our Vision</h3>
-                <p>To act as a catalyst to forge a close link between its members and their representative establishments involved with the Institute who seek to share the mission of the Institute to achieve the objective of spreading knowledge to the general good of the country and the society at large.</p>
-                <h3 class="subsection-title">Our Mission</h3>
-                <p>The Association aims to bring its members spread across the globe under one umbrella, to share the vast treasure of knowledge available in various fields among them and to work in tandem with its' Alma Mater to foster and permeate its ideals across, to the benefits of the society and join hands together for its growth.</p>
-            </section>
-
-            <section id="objectives">
-                <h2 class="section-title">Objectives & Activities</h2>
-                <p>The core focus parameters of the operational committee are designated across critical parameters:</p>
-                <ul>
-                    <li><strong>Capacity Building:</strong> Harvesting a pool of global talent to systematically leverage developmental inputs.</li>
-                    <li><strong>Catalytic Engagement:</strong> Guiding early engineering and science professionals through targeted organizational corporate platforms.</li>
-                    <li><strong>Promoting Excellence:</strong> Incentivizing instructional frameworks via localized merit awards and professional scholarships.</li>
-                </ul>
-            </section>
-
-            <section id="odaa">
-                <h2 class="section-title">Office of Development & Alumni Affairs (ODAA)</h2>
-                <p>The ODAA coordinates structured alumni affairs directly within the elegant, lush 10-acre campus setup. Operating as a unified incorporated body, it handles everything from social meet-ups to institutional developmental programs with absolute corporate transparency, fully adhering to local registration guidelines under Act XXI of 1860.</p>
-            </section>
-
-            <!-- ACTIVITIES SECTIONS -->
-            <section id="activities">
-                <h2 class="section-title">Activities & Programs</h2>
-                <p>The Association regularly runs dynamic target-driven programmatic committees overseen directly by respective Executive Council members to drive execution metrics across the state tier.</p>
-            </section>
-
-            <section id="calendar">
-                <h2 class="section-title">Calendar of Events</h2>
-                <p>Review the comprehensive pipeline layout mapping operations across the upcoming academic calendar cycle:</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Sl. No.</th>
-                            <th>Event Details</th>
-                            <th>Tentative Date</th>
-                            <th>Sponsors</th>
-                            <th>Remarks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Annual General Meet Reunion</td>
-                            <td>December 15, 2026</td>
-                            <td>Alumni Corporate Network</td>
-                            <td>Registration Mandatory</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Global Technology Lecture Circle</td>
-                            <td>January 22, 2027</td>
-                            <td>ODAA Strategic Partners</td>
-                            <td>Virtual Option Available</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="committee">
-                <h2 class="section-title">Events / Programs Committee</h2>
-                <p>These dynamic structural actions are directly managed by our dedicated executive council teams. Registered members can reach out via our centralized mail handlers for precise programmatic data coordination.</p>
-            </section>
-
-            <section id="affiliates">
-                <h2 class="section-title">Affiliates & Partners</h2>
-                <p>Institutions thrive on structured collaboration. Our institutional development frameworks match modern standards, successfully bridging the gap between state governance tracks, global tech entities, and our alumni database network.</p>
-            </section>
-
-            <!-- ALUMNI ACHIEVERS -->
-            <section id="achievers">
-                <h2 class="section-title">Alumni Achievers</h2>
-                <p>Our historical framework highlights stellar professionals across complex tracks—including Civil Service pioneers like Anandaram Barua, medical researchers, and global engineering innovators.</p>
-            </section>
-
-            <section id="limelight">
-                <h2 class="section-title">Top Alumni in the Lime Light</h2>
-                <p>We systematically highlight the contributions of our prominent alumni to global audiences. Members are invited to share verified data profiles along with media records to refine and enrich our institutional records.</p>
-            </section>
-
-            <section id="notable">
-                <h2 class="section-title">Notable Alumni</h2>
-                <p>Our prominent alumni are the crown jewels of our institutional ecosystem. We are continuously expanding our directory tracking setups to maintain clean data records for past graduating groups.</p>
-            </section>
-
-            <section id="directory">
-                <h2 class="section-title">Who is Who - Directory</h2>
-                <p>We are building a robust, unified data engine to keep global alumni connected. If you are an alumnus, please reach out to our office to register your profile in the master database layout.</p>
-            </section>
-
-            <!-- GET INVOLVED -->
-            <section id="get-involved">
-                <h2 class="section-title">Get Involved</h2>
-                <p>Engaging with the institution that shaped your path is an unmatched opportunity. Membership setup is simple, transparent, and completely voluntary.</p>
-            </section>
-
-            <section id="membership">
-                <h2 class="section-title">Membership & Benefits</h2>
-                <p>Becoming an active member unlocks premier corporate networks, full access to our deep analytical research library catalogs, and direct validation options with ODAA. Plus, you can easily tap into our specialty social and tech clusters.</p>
-            </section>
-
-            <section id="giving">
-                <h2 class="section-title">Giving & Donations</h2>
-                <h3 class="subsection-title">Online & Offline Processing Tracks</h3>
-                <p>While our automated modern payment gateways and quick QR validation pipelines are being integrated, members can securely process contributions using cross-checked Bank Demand Drafts or checks payable directly to the <strong>Cotton Collegiate Alumni Association</strong>.</p>
-            </section>
-
-            <!-- STUDENT SERVICES -->
-            <section id="student-services">
-                <h2 class="section-title">Student Services</h2>
-                <p>We help bridging the gap between school pathways and professional industries through data-driven advisory cells and targeted structural mentorship.</p>
-            </section>
-
-            <section id="performers">
-                <h2 class="section-title">Top Performers</h2>
-                <p>We showcase outstanding academic success stories on our main platforms, highlighting top accomplishments to our wider institutional networks.</p>
-            </section>
-
-            <section id="counseling">
-                <h2 class="section-title">Student Counseling Cell</h2>
-                <p>Navigating structural pathways after the 10th and 12th standards can be challenging. Our professional network fields active scientists, engineering managers, and corporate financial experts to deliver transparent, objective career mapping advice.</p>
-            </section>
-
-            <!-- CONTACT FORM SECTION -->
-            <section id="contact-us">
-                <h2 class="section-title">Contact Us Form</h2>
-                <p>Have questions regarding your membership registration, database profiles, or partnership initiatives? Submit your message through our secure communication channel below.</p>
-                
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                    <div class="form-group">
-                        <label for="fullName">Full Legal Name</label>
-                        <input type="text" id="fullName" name="name" class="form-control" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="emailAddr">Email Address</label>
-                        <input type="email" id="emailAddr" name="_replyto" class="form-control" placeholder="johndoe@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="gradYear">Year of Graduation (10th/12th)</label>
-                        <input type="text" id="gradYear" name="graduation_year" class="form-control" placeholder="e.g., 1998">
-                    </div>
-                    <div class="form-group">
-                        <label for="msgContent">Message Content</label>
-                        <textarea id="msgContent" name="message" class="form-control" rows="5" placeholder="Write your details here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Submit Form Transaction</button>
-                </form>
-            </section>
-
-        </main>
-
-        <!-- Sidebar Widgets Container -->
-        <aside>
-            <div class="widget">
-                <h3>Office Hours</h3>
-                <p><strong>Monday - Friday:</strong> 10:30 AM – 5:30 PM</p>
-                <p><strong>Saturday:</strong> 10:30 AM – 1:30 PM</p>
-            </div>
-            <div class="widget">
-                <h3>Campus Location</h3>
-                <p>Cotton Collegiate Govt. H.S. School Campus,</p>
-                <p>Panbazar, Guwahati - 781001,</p>
-                <p>Assam, India.</p>
-            </div>
-            <div class="widget">
-                <h3>Official Communications</h3>
-                <p><strong>Email:</strong> cottoncollegiatealumni.org</p>
-                <p><strong>Support:</strong> alumni.collegiate@gmail.com</p>
-            </div>
-        </aside>
-    </div>
-
-    <!-- Footer Framework -->
-    <footer>
-        <p>&copy; 2026 Cotton Collegiate Alumni Association. All Rights Reserved. Managed securely via GitHub Enterprise and Cloudflare Framework Networks.</p>
-    </footer>
-
-    <!-- Interactive Section Controller Routing Block -->
-    <script>
-        function showSection(sectionId) {
-            // Suppress standard link bubble reactions
-            const sections = document.querySelectorAll('main section');
-            sections.forEach(sec => {
-                sec.classList.remove('active-section');
-            });
-
-            const targetSection = document.getElementById(sectionId);
-            if(targetSection) {
-                targetSection.classList.add('active-section');
-                window.scrollTo({
-                    top: document.querySelector('.hero').offsetTop + document.querySelector('.hero').offsetHeight - 50,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+

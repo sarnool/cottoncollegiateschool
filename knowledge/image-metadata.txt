@@ -1,0 +1,108 @@
+file_path: assets/images/campus/image1.jpg
+description: A photograph showing the main entrance gate of Cotton Collegiate Government Higher Secondary School located in Panbazar, Guwahati. The entrance consists of a large white archway with bilingual signage in English and Assamese, prominently displaying the school name. Behind the gate, a cream-colored multi-story academic building with rows of rectangular windows is visible. Decorative garlands are draped along the arch, and trees frame the background on both sides. The foreground shows the open entrance area with gate pillars and a paved pathway leading into the campus.
+people: No visible individuals are present in the image; the entrance area and surroundings appear empty.
+setting: Exterior entrance of a school campus in an urban environment during daylight, featuring a gated entry with boundary walls, arch signage, and an institutional building set slightly back from the road.
+mood: Quiet and still, formal institutional atmosphere, with a slightly nostalgic feel due to the architectural style and signage.
+suggested pages: School website about us page, campus overview page, alumni or heritage section, educational institution directory listing, promotional brochure or presentation about schools in Guwahati.
+alt text: Entrance gate of Cotton Collegiate Government Higher Secondary School in Panbazar, Guwahati, showing a white arch with English and Assamese signage and a multi-story school building inside.
+
+
+file_path: assets/images/campus/OIP.webp
+description: A photograph showing the exterior of a school building with a cream-colored multi-story structure featuring rectangular windows with white frames and protective grills. A covered entrance area with a ramp and railing leads to the main doorway. Above the entrance, there is signage in a regional script. To the right side of the image, a large white canopy tent is set up with chairs arranged underneath, suggesting an event or gathering. The ground area is paved, and potted plants are placed along the walkway, adding greenery to the scene.
+people: A few individuals are visible near the entrance and along the walkway, including one person standing near the ramp and others gathered under or around the canopy area.
+setting: Exterior of a school campus during daytime, likely prepared for a formal or semi-formal event, with a temporary canopy and seating arrangement set up in front of the building.
+mood: Organized and anticipatory, with a formal yet welcoming atmosphere created by the event setup and decorated entrance area.
+suggested pages: School events page, campus facilities page, admissions or welcome page, annual function or ceremony highlights, institutional brochure or promotional material.
+alt text: School building exterior with a ramped entrance, signage in a regional script, and a white canopy tent with seating arranged for an event in the courtyard.
+
+
+file_path: assets/images/campus/Slide1.jpg
+description: A photograph showing a large group of students assembled in orderly rows in an outdoor school courtyard. The students are wearing uniform outfits consisting of white shirts and khaki trousers and are standing in straight lines facing forward. Some students have one arm raised or placed against the chest, suggesting participation in a pledge or assembly activity. In the foreground, the back of a person standing on a slightly elevated platform is visible, facing the group. The background includes a multi-story school building with windows, trees providing shade, and a parked red car to the right side. The ground appears slightly wet, indicating recent rain.
+people: A large number of students arranged in rows, along with a few individuals positioned at the front and along the sides overseeing the assembly.
+setting: Outdoor school courtyard during daytime, with a formal gathering or assembly taking place in front of an academic building, surrounded by trees and campus structures.
+mood: Disciplined and organized, with a formal and structured atmosphere typical of a school assembly.
+suggested pages: School assembly or daily routine page, student life section, institutional culture page, school events or activities page, promotional or informational material about the school.
+alt text: Students in uniform standing in rows during a school assembly in a courtyard, with a building and trees in the background and a person addressing them from the front.
+
+
+file_path: assets/images/events/image3.jpg
+description: A photograph showing a group of students and adults gathered in a school campus courtyard surrounded by dense greenery and trees. Several students dressed in blue sports uniforms are standing in a line holding plants, gardening tools, and a green board. The board displays handwritten text that reads “SHRAMDAAN FOR SWACHHATA – Cotton Collegiate Govt H.S. School, Panbazar,” along with a date. In the center, a few individuals are actively sweeping the ground using traditional brooms, while others stand nearby observing or participating. The background includes a cream-colored school building with windows partially covered by curtains, and the ground appears damp with scattered leaves and debris. A watermark reading “GPS Map Camera” is visible at the bottom right of the image.
+people: A mixed group of students and adult staff members are present, with some actively engaged in sweeping and cleaning, while others hold plants, tools, or stand observing the activity.
+setting: Outdoor school courtyard during daytime, surrounded by trees and school buildings, with visible signs of a cleanliness or community service activity taking place.
+mood: Active and purposeful, with a sense of community participation and organized effort toward cleanliness and environmental responsibility.
+suggested pages: Community service or social responsibility page, school activities section, environmental or cleanliness drive page, student engagement or co-curricular activities page, school achievements or initiatives section.
+alt text: Students and staff participating in a cleanliness drive at a school courtyard, holding tools and a signboard promoting “Shramdaan for Swachhata,” with trees and a school building in the background.
+
+file_path: assets/images/events/Slide4.jpg
+description: A photograph showing a group of adults gathered in a school campus courtyard surrounded by trees and greenery. The individuals are standing in a semi-circle formation in front of a banner mounted on a stand. The banner includes visible logos such as “G20” and text related to a cleanliness or awareness initiative, with “Swachhta” partially readable. In the center, one individual wearing traditional attire stands slightly forward, while others in casual and semi-formal clothing stand around attentively. The background features a cream-colored multi-story school building with windows and red curtains, along with paved ground and lush plants under daylight.
+
+people: A group of adults standing together in a semi-circle, appearing to participate in or observe a formal discussion or awareness activity.
+
+setting: Outdoor school courtyard during daytime, with a banner indicating a formal initiative or awareness program, surrounded by trees and a school building.
+
+mood: Formal and attentive, with an organized and purposeful atmosphere suggesting a structured event or awareness session.
+
+suggested pages: School events or programs page, community engagement page, awareness or initiative section, institutional activities page, promotional or informational material.
+
+alt text: Group of adults standing in a school courtyard near a banner related to a cleanliness or awareness initiative, with trees and a school building in the background.
+
+file_path: assets/images/staff/Slide5.jpg
+description: A photograph showing a formal indoor event taking place on a stage within a hall. A group of adults are gathered around a long table covered with a beige cloth, positioned in front of a backdrop with red curtains. At the center, several individuals are jointly holding a large ceremonial brass lamp, typically used for inaugurations. Behind them, a banner with text in a regional script is displayed, indicating the name of the institution and the event. On the left side, one individual stands holding a microphone, appearing to address the audience. The table holds decorative items including a flower arrangement, and chairs are arranged behind it.
+
+people: A group of adults standing on and around the stage, with some participating in the ceremonial lighting or presentation of a lamp, while one individual speaks into a microphone and others stand nearby.
+
+setting: Indoor auditorium or hall within a school or institutional building, set up for a formal ceremony or inauguration event with stage decorations, banners, and seating arrangements.
+
+mood: Formal and ceremonial, with an organized and respectful atmosphere suitable for an official program or inauguration.
+
+suggested pages: School events or समारोह page, institutional programs or initiatives section, cultural or ceremonial events page, achievements or highlights section, official functions or announcements page.
+
+alt text: Group of adults on a stage holding a ceremonial lamp during an indoor school event, with a banner and red curtains in the background and a speaker addressing the audience.
+
+file_path: assets/images/2016-10-17.jpg
+description: A daylight photograph of an older school campus building partly framed by trees and a fenced garden strip in front. The structure appears weathered and institutional, with windows along the facade and shaded grounds that suggest a long-established campus environment.
+people: No clearly visible people in the foreground; the scene is primarily architectural and landscape focused.
+setting: Outdoor school campus frontage with trees, boundary posts, and a garden area beside an internal roadway.
+mood: Calm, archival, and heritage-oriented.
+suggested pages: About page, school history section, heritage timeline, campus legacy content.
+alt text: Older Cotton Collegiate campus building seen behind trees and a fenced garden area in daylight.
+
+file_path: assets/images/Cotton_Collegiate_logo.jpg
+description: Circular emblem of Cotton Collegiate Government Higher Secondary School, featuring Assamese and English text around the border and a central red sunburst motif.
+people: No people shown; this is a logo graphic.
+setting: Graphic identity asset used for school branding.
+mood: Formal and institutional.
+suggested pages: Site header branding, official documents section, about page identity block.
+alt text: Cotton Collegiate Government Higher Secondary School circular logo with Assamese and English text.
+
+file_path: assets/images/IMG_20220315_210949.jpg
+description: Indoor group photo of alumni and guests seated in a semicircle in a hall or lounge, many wearing traditional Assamese gamusa scarves, during an organized association gathering.
+people: A mixed group of adult men and women, likely alumni members and guests, seated together for a formal or commemorative photo.
+setting: Indoor event venue with tables, chairs, and ambient lighting, likely during an alumni meet.
+mood: Formal, warm, and community-centered.
+suggested pages: Alumni page, membership page, alumni reunion highlights, association events gallery.
+alt text: Alumni members seated together indoors during an association gathering, many wearing traditional Assamese gamusa scarves.
+
+file_path: assets/images/IMG_20220315_211248.jpg
+description: Wide indoor group portrait of alumni participants and organizers arranged in two rows, with seated members in front and standing members behind, taken during a formal meeting or reunion.
+people: A large mixed group of adult alumni and organizers in formal and traditional attire.
+setting: Indoor gathering venue with lounge seating and event decor.
+mood: Ceremonial, collaborative, and celebratory.
+suggested pages: Alumni network page, notable alumni/community section, membership outreach page, events recap section.
+alt text: Large group of alumni and organizers posing indoors during a formal reunion or association meeting.
+
+file_path: assets/images/IMG_20220315_211622.jpg
+description: Mid-range photo of seated alumni members during an indoor event, highlighting senior participants wearing gamusa scarves and engaged in a formal program setting.
+people: Adult alumni members seated in a row, including senior participants and invited members.
+setting: Indoor event hall with warm lighting and arranged seating.
+mood: Respectful, formal, and commemorative.
+suggested pages: Alumni achievers section, association leadership section, reunion highlights.
+alt text: Seated alumni members at an indoor event, wearing traditional Assamese scarves during a formal program.
+
+file_path: assets/images/IMG_20220315_211626.jpg
+description: Close group view of alumni attendees seated during an indoor meeting, showing participants in traditional and formal attire during discussion or ceremony.
+people: Adult alumni attendees seated side-by-side, including both men and women.
+setting: Indoor association meeting venue with tables and background decor.
+mood: Community-focused, formal, and participatory.
+suggested pages: Membership page, alumni community section, event participation highlights.
+alt text: Alumni attendees seated indoors during an association event, with traditional Assamese scarves and formal attire.

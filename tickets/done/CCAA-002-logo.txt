@@ -1,0 +1,18 @@
+Ticket: CCAA-002
+Title: Add logo to the website
+Priority: High
+Description:
+Use the logo located in assets\image and add the logo to the website.
+
+Acceptance Criteria:
+- The logo should be visibile prominently in the website.
+- The size should be as per industry best practice. It should not be very small or very large
+- The logo need to replace the space where the school name is being shown now.
+- The page should be responsive.
+
+---
+STATUS: DONE
+Completed: 2026-06-24
+Files changed: index.html, about.html, alumni.html, contact.html, events.html, membership.html, odaa.html, student-services.html, vision-mission.html, css/styles.css
+Issues found and fixed: Added responsive logo styling to the shared header and removed outdated TODO comments.
+Outstanding items: None

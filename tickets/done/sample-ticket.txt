@@ -1,0 +1,11 @@
+Ticket: CCAA-001
+Title: Add photo gallery to Events page
+Priority: High
+Description:
+The events page needs a photo gallery showing photos from past events.
+
+Acceptance Criteria:
+- Gallery shows all photos from assets/images/events/
+- Each photo has a caption from image-metadata.txt
+- 3 columns on desktop, 1 column on mobile
+- Clicking a photo opens it full size
